@@ -13,14 +13,14 @@ body{
 
 #navegador{
     margin-top: 20px;
-    border: solid 5px white;
     display: grid;
-    grid-template-columns: 2fr auto 1fr 1fr;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
     grid-template-rows: 40px 2fr;
+    row-gap: 25px;
     grid-template-areas:
     
-    "prom prom prom prom"
-    "logo naveg usua user"
+    "prom prom prom"
+    "logo naveg user"
 
     ;
 }
@@ -29,53 +29,72 @@ body{
 
 .promocional{
     background-color: #fc664f;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
     grid-area: prom;
 }
 
 header div p{
+    font-variant: small-caps;
+    font-style: italic;
     color: white;
 }
 
 .logo{
-    text-align: center;
-    margin-left: 5%;
     grid-area: logo;
-} 
+    display: flex;
+    justify-content: center;
+    justify-items: center;
 
-header div a img{
-    width: 100px;
-}
+} 
 
 .navbar{
     list-style: none;
     text-align: center; 
     grid-area: naveg;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.mi__logo{
+    width: 150px;
 }
 
 header nav ul{
     font-size: 100%;
+    display: flex;
+    gap: 50px;
+
 }
 
 header nav ul li{
-    font-size: 20px;
-    font-weight: bold;
-    display: inline-block;
-    margin: 5%;
-   
+    font-size: 18px;
+    font-weight: normal;
+    display: flex;
+
+
 }
 
 header nav ul li a{
-    margin-left: auto;
     color: aliceblue;
     text-decoration: none;
 }
 
 .user{
-    grid-area: usua;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    grid-area: user;
+}
+
+.icon__regis{
+    width: 120px;
 }
 
 .login{
-    grid-area: user;
+    width: 40px;
 }
