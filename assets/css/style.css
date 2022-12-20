@@ -18,14 +18,12 @@ body{
     grid-template-rows: 40px 2fr;
     row-gap: 25px;
     grid-template-areas:
-    
+
     "prom prom prom"
     "logo naveg user"
-
     ;
+    display: none;
 }
-
-
 
 .promocional{
     background-color: #fc664f;
@@ -33,12 +31,14 @@ body{
     justify-content: center;
     align-items: center;
     grid-area: prom;
+    display: none;
 }
 
 header div p{
     font-variant: small-caps;
     font-style: italic;
     color: white;
+    display: none;
 }
 
 .logo{
@@ -46,16 +46,7 @@ header div p{
     display: flex;
     justify-content: center;
     justify-items: center;
-
-} 
-
-.navbar{
-    list-style: none;
-    text-align: center; 
-    grid-area: naveg;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    display: none;
 
 }
 
@@ -63,10 +54,25 @@ header div p{
     width: 150px;
 }
 
+.navbar{
+    list-style: none;
+    grid-area: naveg;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    display: none;
+
+}
+
+.menu__hamb{
+    width: 40px;
+    display: none;
+}
+
 header nav ul{
     font-size: 100%;
     display: flex;
-    gap: 50px;
 
 }
 
@@ -75,12 +81,12 @@ header nav ul li{
     font-weight: normal;
     display: flex;
 
-
 }
 
 header nav ul li a{
     color: aliceblue;
     text-decoration: none;
+
 }
 
 .user{
@@ -97,4 +103,61 @@ header nav ul li a{
 
 .login{
     width: 40px;
+}
+
+@media only screen and (min-width: 375px){
+    #navegador{
+        display: block;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 0.5fr 2fr 0.3fr;
+        grid-template-rows: 40px 2fr;
+        border: solid 4px white;
+        row-gap: 20px;
+        justify-content: space-evenly;
+        grid-template-areas:
+
+        "prom prom prom"
+        "logo naveg user"
+        ;
+    }
+    .promocional{
+        display: block;
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+    header div p{
+        width: 350px;
+        display: block;
+        display: flex;
+        justify-content: space-evenly;
+        line-height: 13px;
+    }
+
+    .logo{
+        display: block;
+        border: solid 4px white;
+    }
+
+    .mi__logo{
+        width: 80px;
+    }
+
+    .navbar{
+        display: block;
+        border: solid 4px white;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .menu__hamb{
+        display: block;
+
+    }
+
+    header nav ul{
+        display: none;
+    }
 }
