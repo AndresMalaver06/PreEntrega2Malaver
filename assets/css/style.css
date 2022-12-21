@@ -105,7 +105,7 @@ header nav ul li a{
     width: 40px;
 }
 
-@media only screen and (min-width: 375px){
+@media only screen and (min-width: 78px){
     #navegador{
         display: block;
         margin-top: 20px;
@@ -118,7 +118,7 @@ header nav ul li a{
         grid-template-areas:
 
         "prom prom prom"
-        "logo naveg user"
+        "naveg logo user"
         ;
     }
     .promocional{
