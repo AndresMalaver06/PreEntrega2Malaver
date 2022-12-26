@@ -10,12 +10,13 @@ body{
 
 /* header y navbar*/
 
+#navegador{
+    width: 100%;
+}
 
 .promocional{
     background-color: #fc664f;
-    justify-content: center;
-    align-items: center;
-    grid-area: prom;
+
 }
 
 header div p{
@@ -25,10 +26,7 @@ header div p{
 }
 
 .logo{
-    grid-area: logo;
-    justify-content: center;
-    justify-items: center;
-
+    display: flex;
 }
 
 .mi__logo{
@@ -38,23 +36,28 @@ header div p{
 .navbar{
     width: 100%;
     list-style: none;
-    grid-area: naveg;
-    align-items: center;
-    justify-content: space-around;
-    position: relative;
+    display: flex;
+    align-items: center
 }
 
-.menu__hamb{
-    width: 10px;
-    display: none;
+.bars__menu{
+    width: 25px;
+    height: 25px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.bars__menu span{
+    display: block;
+    height: 3px;
+    background-color: white;
+    margin-top: 6px;
+    border-radius: 10px;
 }
 
 header nav ul{
     font-size: 100%;
     display: flex;
-    text-align: center;
-    justify-content: center;
-
 }
 
 header nav ul li{
@@ -62,7 +65,6 @@ header nav ul li{
     font-weight: normal;
     display: flex;
     margin: 5%;
-
 }
 
 header nav ul li a{
@@ -78,7 +80,6 @@ header nav ul li a{
     gap: 12px;
     justify-content: center;
     align-items: center;
-    grid-area: user;
 }
 
 .icon__regis{
@@ -89,27 +90,42 @@ header nav ul li a{
     width: 40px;
 }
 
+        /*articulo principal*/
+
+#informacion__principal{
+    width: 100%;
+}
+
+.encabezado__titulo{
+    color: white;
+    display: flex;
+}
+
+        /*responsive movil*/
+
 @media only screen and (min-width: 375px){
     #navegador{
+        width: 100%;
         display: block;
         margin-top: 20px;
         display: grid;
-        grid-template-columns: 0.5fr 2fr 0.3fr;
+        grid-template-columns: 0.2fr 0.5fr 0.5fr;
         grid-template-rows: 40px 2fr;
-        border: solid 4px white;
         row-gap: 20px;
         justify-content: space-evenly;
         grid-template-areas:
 
         "prom prom prom"
-        "naveg logo user"
+        "naveg logo none"
         ;
     }
     .promocional{
         display: block;
         display: flex;
         text-align: center;
-        justify-content: space-evenly;
+        justify-content: center;
+        align-items: center;
+        grid-area: prom;
     }
     header div p{
         width: 350px;
@@ -118,33 +134,131 @@ header nav ul li a{
         justify-content: space-evenly;
         line-height: 13px;
     }
-
     .logo{
         display: block;
-        border: solid 4px white;
-    }
-
-    .mi__logo{
-        width: 80px;
-    }
-
-    .navbar{
-        display: block;
-        border: solid 4px white;
+        grid-area: logo;
         display: flex;
         justify-content: center;
-        align-content: center;
     }
-
-    .menu__hamb{
+    .mi__logo{
+        width: 90px;
+    }
+    .navbar{
         display: block;
+        display: flex;
+        margin-top: 10px;
+        justify-content: flex-end;
+        grid-area: naveg;
+    }
+    nav ul li div{
+        display: flex;
+        justify-content: center;
+    }
+    .bars__menu{
+        display: block;
+        transform: translate(-50%, -50%)scale(1.2);
+    }
+    nav ul li{
+        position: relative;
+        display: flex;
+    }
+    nav ul li:hover ul{
+        display: block;
+    }
+    nav ul ul{
+        width: 175px;
+        position: absolute;
+        display: none;
+        margin-top: 25px;
+        background-color: #5f5e5e4f;
+        border-radius: 5px;
+    }
+    nav ul ul li{
+        width: max-content;
+        display: block;
+        margin-top: 10px;
+        margin-right: 50px;
+    }
+    .user{
+        display: none;
+    }
+
+    #informacion__principal{
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 350px;
+        grid-template-rows: 2fr;
+        row-gap: 20px;
+        justify-content: space-evenly;
+        grid-template-areas:
+
+        "imagen"
+        "encabezado"
+        ;
+    }
+
+    .foto__inspiracional{
+        grid-area: imagen;
+    }
+
+    article div section{
+        display: block;
+    }
+
+    .foto__prin{
+        width: 350px;
+    }
+
+    .encabezado__titulo{
+        width: 340px;
+        display: block;
+        text-align: left;
+        grid-area: encabezado;
 
     }
 
-    header nav ul{
+    .subtitulo__principal{
+        width: 340px;
+        display: block;
+        display: flex;
+        justify-content: flex-start;
+        grid-area: subtitulo_1;
+    }
+
+    article div section{
+        display: flex;
+        color: white;
+    }
+
+    article div section h2{
+        font-family: "roboto";
+        font-size: large;
+    }
+
+    .titulo__principal{
+        width: 340px;        
+        display: block;
+        grid-area: tiutlo;
+    }
+
+    .parrafo__prncipal{
+        width: 340px;        
+        display: block;
+        grid-area: parrafo_p;
+    }
+    #division__objetivos{
         display: none;
     }
 }
+
+        /*responsive tab*/
+
+
+
+
+        /*responsive desktop*/
 
 @media only screen and (min-width: 1280px){
     #navegador{
@@ -196,8 +310,7 @@ header nav ul li a{
         position: relative;
     }
 
-    .menu__hamb{
-        width: 10px;
+    .bars__menu{
         display: none;
     }
 
