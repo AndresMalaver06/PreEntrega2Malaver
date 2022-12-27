@@ -94,6 +94,9 @@ header nav ul li a{
 
 #informacion__principal{
     width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
 }
 
 .encabezado__titulo{
@@ -109,7 +112,7 @@ header nav ul li a{
         display: block;
         margin-top: 20px;
         display: grid;
-        grid-template-columns: 0.2fr 0.5fr 0.5fr;
+        grid-template-columns: 0.2fr 0.5fr 0.3fr;
         grid-template-rows: 40px 2fr;
         row-gap: 20px;
         justify-content: space-evenly;
@@ -149,10 +152,7 @@ header nav ul li a{
         margin-top: 10px;
         justify-content: flex-end;
         grid-area: naveg;
-    }
-    nav ul li div{
-        display: flex;
-        justify-content: center;
+        position: ;
     }
     .bars__menu{
         display: block;
@@ -165,33 +165,38 @@ header nav ul li a{
     nav ul li:hover ul{
         display: block;
     }
+
+    nav ul li div{
+        display: flex;
+        justify-content: center;
+    }
+
     nav ul ul{
         width: 175px;
         position: absolute;
         display: none;
         margin-top: 25px;
-        background-color: #5f5e5e4f;
+        background-color: #fc664f;
         border-radius: 5px;
     }
+
     nav ul ul li{
         width: max-content;
         display: block;
         margin-top: 10px;
         margin-right: 50px;
     }
+
     .user{
         display: none;
     }
 
     #informacion__principal{
         width: 100%;
-        display: block;
-        margin-top: 20px;
         display: grid;
         grid-template-columns: 350px;
         grid-template-rows: 2fr;
-        row-gap: 20px;
-        justify-content: space-evenly;
+        row-gap: 5px;
         grid-template-areas:
 
         "imagen"
@@ -214,7 +219,7 @@ header nav ul li a{
     .encabezado__titulo{
         width: 340px;
         display: block;
-        text-align: left;
+        text-align: center;
         grid-area: encabezado;
 
     }
@@ -222,8 +227,6 @@ header nav ul li a{
     .subtitulo__principal{
         width: 340px;
         display: block;
-        display: flex;
-        justify-content: flex-start;
         grid-area: subtitulo_1;
     }
 
@@ -233,13 +236,13 @@ header nav ul li a{
     }
 
     article div section h2{
-        font-family: "roboto";
         font-size: large;
     }
 
     .titulo__principal{
-        width: 340px;        
+        width: 340px;
         display: block;
+        font-size: xx-large;
         grid-area: tiutlo;
     }
 
@@ -248,14 +251,301 @@ header nav ul li a{
         display: block;
         grid-area: parrafo_p;
     }
+
+
     #division__objetivos{
-        display: none;
+        width: 100%;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        display: grid;
+        background-color: #ffffff46;
+        grid-template-columns: 350px;
+    }
+
+    .titulo__objetivos{
+        font-size: 28px;
+        color: #fc664f;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section div{
+        display: flex;
+        display: block;
+        justify-content: center;
+        color: aliceblue;
+        margin: 20px 0 20px;
+    }
+
+    section div div img{
+        width: 350px;
+    }
+
+    section div div h4{
+        display: flex;
+        justify-content: center;
+        font-size: 22px;
+    }
+
+    section div div p{
+        display: flex;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    footer{
+        width: 100%;
+        height: 50px;
+        margin: 20px 0 20px;
+        background-color: #fc664f;
+        color: aliceblue;
+        display: flex;
+        align-items: center;
+        text-align: center;
     }
 }
 
         /*responsive tab*/
 
+@media only screen and (min-width: 768px){
+    #navegador{
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 0.1fr 0.8fr 0.2fr;
+        grid-template-rows: 40px 2fr;
+        row-gap: 20px;
+        justify-content: space-evenly;
+        grid-template-areas:
 
+        "prom prom prom"
+        "naveg logo none"
+        ;
+    }
+    .promocional{
+        display: block;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        grid-area: prom;
+    }
+    header div p{
+        width: 350px;
+        display: block;
+        display: flex;
+        justify-content: space-evenly;
+        line-height: 13px;
+    }
+    .logo{
+        display: block;
+        grid-area: logo;
+        display: flex;
+        justify-content: center;
+    }
+    .mi__logo{
+        width: 120px;
+    }
+    .navbar{
+        display: block;
+        display: flex;
+        margin-top: 10px;
+        justify-content: flex-end;
+        grid-area: naveg;
+        position: ;
+    }
+    .bars__menu{
+        display: block;
+        transform: translate(-50%, -50%)scale(1.2);
+    }
+    nav ul li{
+        position: relative;
+        display: flex;
+    }
+    nav ul li:hover ul{
+        display: block;
+    }
+
+    nav ul li div{
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul ul{
+        width: 175px;
+        position: absolute;
+        display: none;
+        margin-top: 25px;
+        background-color: #fc664f;
+        border-radius: 5px;
+    }
+
+    nav ul ul li{
+        width: max-content;
+        display: block;
+        margin-top: 10px;
+        margin-right: 50px;
+    }
+
+    .user{
+        display: none;
+    }
+
+    #informacion__principal{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr;
+        row-gap: 20px;
+        grid-template-areas:
+
+        "imagen encabezado"
+        ;
+    }
+
+    .foto__inspiracional{
+        grid-area: imagen;
+        display: flex;
+        justify-content: center;
+    }
+
+    article{
+        display: flex;
+        align-items: center;
+    }
+
+    .foto__prin{
+        width: 320px;
+    }
+
+    .encabezado__titulo{
+        width: 100%;
+        text-align: start;
+        text-align: justify;
+        grid-area: encabezado;
+
+    }
+
+    .subtitulo__principal{
+        width: 320px;
+        display: block;
+        grid-area: subtitulo_1;
+    }
+
+    article div section{
+        width: 350px;
+        display: flex;
+        display: block;
+        justify-content: flex-start;
+        color: white;
+    }
+
+    article div section h2{
+        font-size: large;
+    }
+
+    .titulo__principal{
+        width: 340px;
+        display: block;
+        font-size: xx-large;
+        grid-area: tiutlo;
+    }
+
+    .parrafo__prncipal{
+        width: 340px;        
+        display: block;
+        grid-area: parrafo_p;
+    }
+
+
+    #division__objetivos{
+        width: 100%;
+        display: grid;
+        display: block;
+        justify-content: center;
+        background-color: #ffffff46;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 3fr;
+        row-gap: 20px;
+        grid-template-areas:
+
+        "objetivos objetivos objetivos"
+        "objetivo1 objetivo2 objetivo3"
+
+        ;
+        
+    }
+
+    .titulo__objetivos{
+        padding-top: 30px;
+        font-size: 28px;
+        color: #fc664f;
+        display: flex;
+        margin-top: 20px;
+        grid-area: objetivos;
+    }
+
+    .objetivos__list{
+        display: flex;
+        color: aliceblue;
+    }
+
+    section div div{
+        display: flex;
+        display: block;
+        justify-content: space-around;
+        align-items: center;
+        color: aliceblue;
+    }
+
+    .servicio__online{
+        width: 250px;
+        text-align: center;
+        grid-area: objetivo1;
+    }
+
+    .aumento__ranking{
+        width: 250px;
+        text-align: center;
+        grid-area: objeivo2;
+    }
+
+    .avanzar{
+        width: 250px;
+        text-align: center;
+        grid-area: objetivo3;
+    }
+
+    section div div img{
+        width: 200px;
+    }
+
+    section div div h4{
+        display: flex;
+        font-size: 22px;
+    }
+
+    section div div p{
+        width: 80%;
+        padding-left: 27px;
+        text-align: justify;
+        font-size: 15px;
+    }
+
+    footer{
+        width: 100%;
+        height: 50px;
+        margin: 30px 0 20px;
+        background-color: #fc664f;
+        color: aliceblue;
+        display: flex;
+        justify-content: center;
+    }
+}
 
 
         /*responsive desktop*/
@@ -307,35 +597,26 @@ header nav ul li a{
         display: flex;
         align-items: center;
         justify-content: space-around;
-        position: relative;
     }
 
     .bars__menu{
         display: none;
     }
-
-    header nav ul{
-        font-size: 100%;
-        display: flex;
-        text-align: center;
-        justify-content: center;
+    nav ul li{
+        display: block;
 
     }
 
-    header nav ul li{
-        font-size: 18px;
-        font-weight: normal;
-        display: flex;
-        margin: 5%;
-
+    nav ul li div{
+        display: block;
     }
 
-    header nav ul li a{
-        width: max-content;
-        margin-left: auto;
-        color: aliceblue;
-        text-decoration: none;
+    nav ul ul{
+        display: block;
+    }
 
+    nav ul ul li{
+        display: block;
     }
 
     .user{
@@ -353,4 +634,157 @@ header nav ul li a{
     .login{
         width: 40px;
     }
+
+    #informacion__principal{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr;
+        row-gap: 20px;
+        grid-template-areas:
+
+        "imagen encabezado"
+        ;
+    }
+
+    .foto__inspiracional{
+        grid-area: imagen;
+        display: flex;
+        justify-content: center;
+    }
+
+    article{
+        display: flex;
+        align-items: center;
+    }
+
+    .foto__prin{
+        width: 320px;
+    }
+
+    .encabezado__titulo{
+        width: 100%;
+        text-align: start;
+        text-align: justify;
+        grid-area: encabezado;
+
+    }
+
+    .subtitulo__principal{
+        width: 320px;
+        display: block;
+        grid-area: subtitulo_1;
+    }
+
+    article div section{
+        width: 350px;
+        display: flex;
+        display: block;
+        justify-content: flex-start;
+        color: white;
+    }
+
+    article div section h2{
+        font-size: large;
+    }
+
+    .titulo__principal{
+        width: 340px;
+        display: block;
+        font-size: xx-large;
+        grid-area: tiutlo;
+    }
+
+    .parrafo__prncipal{
+        width: 340px;        
+        display: block;
+        grid-area: parrafo_p;
+    }
+
+
+    #division__objetivos{
+        width: 100%;
+        display: grid;
+        display: block;
+        justify-content: center;
+        background-color: #ffffff46;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 3fr;
+        row-gap: 20px;
+        grid-template-areas:
+
+        "objetivos objetivos objetivos"
+        "objetivo1 objetivo2 objetivo3"
+
+        ;
+        
+    }
+
+    .titulo__objetivos{
+        padding-top: 30px;
+        font-size: 28px;
+        color: #fc664f;
+        display: flex;
+        margin-top: 20px;
+        grid-area: objetivos;
+    }
+
+    .objetivos__list{
+        display: flex;
+        color: aliceblue;
+    }
+
+    section div div{
+        display: flex;
+        display: block;
+        justify-content: space-around;
+        align-items: center;
+        color: aliceblue;
+    }
+
+    .servicio__online{
+        width: 250px;
+        text-align: center;
+        grid-area: objetivo1;
+    }
+
+    .aumento__ranking{
+        width: 250px;
+        text-align: center;
+        grid-area: objeivo2;
+    }
+
+    .avanzar{
+        width: 250px;
+        text-align: center;
+        grid-area: objetivo3;
+    }
+
+    section div div img{
+        width: 200px;
+    }
+
+    section div div h4{
+        display: flex;
+        font-size: 22px;
+    }
+
+    section div div p{
+        width: 80%;
+        padding-left: 27px;
+        text-align: justify;
+        font-size: 15px;
+    }
+
+    footer{
+        width: 100%;
+        height: 50px;
+        margin: 30px 0 20px;
+        background-color: #fc664f;
+        color: aliceblue;
+        display: flex;
+        justify-content: center;
+    }
+}
+
 }
