@@ -570,9 +570,6 @@ header nav ul li a{
         display: none;
     }
 
-    nav ul li{
-        border: solid 2px white;
-    }
 
     nav ul li:hover ul{
         display: flex;
