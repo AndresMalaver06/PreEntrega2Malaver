@@ -310,8 +310,10 @@ header nav ul li a{
         background-color: #fc664f;
         color: aliceblue;
         display: flex;
+        justify-content: center;
         align-items: center;
         text-align: center;
+        font-size: 15px;
     }
 }
 
@@ -550,6 +552,9 @@ header nav ul li a{
         color: aliceblue;
         display: flex;
         justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 15px;
     }
 }
 
@@ -601,51 +606,21 @@ header nav ul li a{
 
     .navbar{
         width: 100%;
-        list-style: none;
-        grid-area: naveg;
+        list-style: none
         display: flex;
         align-items: center;
         justify-content: space-around;
-    }
-
-    .bars__menu{
-        display: none;
-    }
-
-    .bars__menu span{
-        display: none;
-    }
-
-    nav ul li{
-        display: block;
-        display: flex;
-    }
-    nav ul li:hover ul{
-        display: block;
-    }
-
-    nav ul li div{
-        display: block;
-        display: flex;
-        justify-content: center;
+        grid-area: naveg;
     }
 
     nav ul ul{
         display: block;
-        width: 175px;
-        display: none;
-        margin-top: 25px;
-        background-color: #fc664f;
-        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    nav ul ul li{
-        display: block;
-        width: max-content;
-        display: block;
-        margin-top: 10px;
-        margin-right: 50px;
-    }
+
 
     .user{
         display: flex;
@@ -812,5 +787,8 @@ header nav ul li a{
         color: aliceblue;
         display: flex;
         justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 15px;
     }
 }
