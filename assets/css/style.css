@@ -574,14 +574,17 @@ header nav ul li a{
         background-color: #fc664f;
         display: flex;
         justify-content: center;
-        align-items: center;
+        text-align: center;
         grid-area: prom;
     }
 
     header div p{
+        width: 100%;
         font-variant: small-caps;
         font-style: italic;
         color: white;
+        font-size: xx-large;
+        font-size: 18px;
     }
 
     .logo{
