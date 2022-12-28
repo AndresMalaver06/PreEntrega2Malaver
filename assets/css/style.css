@@ -140,7 +140,6 @@ header nav ul li a{
         line-height: 13px;
     }
     .logo{
-        display: block;
         grid-area: logo;
         display: flex;
         justify-content: center;
@@ -563,6 +562,8 @@ header nav ul li a{
 
 @media only screen and (min-width: 1280px){
     #navegador{
+        width: 100%;
+        display: block;
         margin-top: 20px;
         display: grid;
         grid-template-columns: 0.5fr 2fr 0.5fr;
@@ -576,6 +577,7 @@ header nav ul li a{
     }
 
     .promocional{
+        display: block;
         background-color: #fc664f;
         display: flex;
         justify-content: center;
@@ -605,22 +607,36 @@ header nav ul li a{
     }
 
     .navbar{
-        width: 100%;
-        list-style: none
-        display: flex;
+        display: block;
+        list-style: none;
         align-items: center;
-        justify-content: space-around;
+        display: inline-block;
         grid-area: naveg;
     }
 
-    nav ul ul{
-        display: block;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .bars__menu{
+        width: 1000px;
     }
 
+    .bars__menu span{
+        display: none;
+    }
 
+    nav ul li{
+        border: solid 2px white;
+    }
+
+    nav ul li ul{
+        width: 100%;
+        border: solid 2px white;
+    }
+
+    .naveg__list{
+        position: absolute;
+        width: 10px;
+        display: block;
+        background-color: #220b2b;
+    }
 
     .user{
         display: flex;
@@ -680,7 +696,7 @@ header nav ul li a{
     }
 
     article div section{
-        width: 350px;
+        width: 90%;
         display: flex;
         display: block;
         justify-content: flex-start;
