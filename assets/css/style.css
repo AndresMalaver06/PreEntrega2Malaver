@@ -37,24 +37,8 @@ header div p{
     width: 100%;
     list-style: none;
     display: flex;
-    align-items: center
-}
-
-.bars__menu{
-    width: 25px;
-    height: 25px;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    display: none;
-}
-
-.bars__menu span{
-    display: block;
-    height: 3px;
-    background-color: white;
-    margin-top: 6px;
-    border-radius: 10px;
-    display: none;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 header nav ul{
@@ -63,6 +47,7 @@ header nav ul{
 }
 
 header nav ul li{
+    width: max-content;
     font-size: 18px;
     font-weight: normal;
     display: flex;
@@ -157,7 +142,19 @@ header nav ul li a{
 
     .bars__menu{
         display: block;
+        width: 25px;
+        height: 25px;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
         transform: translate(-50%, -50%)scale(1.2);
+    }
+    
+    .bars__menu span{
+        display: block;
+        height: 3px;
+        background-color: white;
+        margin-top: 6px;
+        border-radius: 10px;
     }
 
     .bars__menu span{
@@ -172,12 +169,7 @@ header nav ul li a{
         display: block;
     }
 
-    nav ul li div{
-        display: flex;
-        justify-content: center;
-    }
-
-    nav ul ul{
+    .naveg__list{
         width: 175px;
         position: absolute;
         display: none;
@@ -187,7 +179,7 @@ header nav ul li a{
     }
 
     nav ul ul li{
-        width: max-content;
+        width: 200px;
         display: block;
         margin-top: 10px;
         margin-right: 50px;
@@ -357,45 +349,6 @@ header nav ul li a{
     }
     .mi__logo{
         width: 120px;
-    }
-    .navbar{
-        display: block;
-        display: flex;
-        margin-top: 10px;
-        justify-content: flex-end;
-        grid-area: naveg;
-    }
-    .bars__menu{
-        display: block;
-        transform: translate(-50%, -50%)scale(1.2);
-    }
-    nav ul li{
-        position: relative;
-        display: flex;
-    }
-    nav ul li:hover ul{
-        display: block;
-    }
-
-    nav ul li div{
-        display: flex;
-        justify-content: center;
-    }
-
-    nav ul ul{
-        width: 175px;
-        position: absolute;
-        display: none;
-        margin-top: 25px;
-        background-color: #fc664f;
-        border-radius: 5px;
-    }
-
-    nav ul ul li{
-        width: max-content;
-        display: block;
-        margin-top: 10px;
-        margin-right: 50px;
     }
 
     .user{
@@ -607,18 +560,13 @@ header nav ul li a{
     }
 
     .navbar{
-        display: block;
+        display: flex;
+        justify-content: center;
         list-style: none;
-        align-items: center;
-        display: inline-block;
         grid-area: naveg;
     }
 
     .bars__menu{
-        width: 1000px;
-    }
-
-    .bars__menu span{
         display: none;
     }
 
@@ -626,17 +574,21 @@ header nav ul li a{
         border: solid 2px white;
     }
 
-    nav ul li ul{
-        width: 100%;
-        border: solid 2px white;
+    nav ul li:hover ul{
+        display: flex;
     }
 
     .naveg__list{
-        position: absolute;
-        width: 10px;
-        display: block;
+        display: flex;
+        justify-content: center;
         background-color: #220b2b;
     }
+
+    nav ul ul li{
+        width: max-content;
+        margin-top: 10px;
+    }
+
 
     .user{
         display: flex;
